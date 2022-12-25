@@ -9,8 +9,9 @@ const DownloadButton = ({ id }: DownloadButtonProps) => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const handleDownloadButtonClick = async () => {
     try {
-      setIsSubmitting(true);
+      if (isSubmitting) return;
       if (id === "" || id === null || id === undefined || !id) return;
+      setIsSubmitting(true);
       const {
         data: { signedUrl },
       } = await axios.post<{ signedUrl: string }>("/api/viewFile", { id });
