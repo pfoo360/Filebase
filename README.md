@@ -61,6 +61,20 @@ I also wanted to experiment with NextJS (instead of CRA) and Prisma (instead of 
 Originally I was going to send the file to a backend api and then upload the file from the backend api to Firebase Storage via the Admin SDK. After a few videos and articles I found that might be unnecessary and it would be quicker to upload the image from the frontend to Firebase Storage instead just using the Client SDK (and also due to Vercel limiting the size of requests). The original idea to send the file to the backend and then upload the file from the backend to Firebase is below (although it needs some fine tuning and was originally written in an Express app using Multer):
 
 ```
+
+const express = require("express");
+const multer = require("multer");
+const { initializeApp, cert } = require("firebase-admin/app");
+const serviceAccount = require("./firebase-adminsdk.json");
+const { getStorage } = require("firebase-admin/storage");
+const stream = require("stream");
+const fs = require("fs");
+
+const app = express();
+
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
 const memoryStorage = multer.memoryStorage();
 const upload = multer({ storage: memoryStorage });
 
