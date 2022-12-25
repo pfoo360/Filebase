@@ -76,7 +76,7 @@ After adding a folder (or two) you can click on its name to be taken inside. The
 <br/>
 <br/>
 
-Clicking on the 'Add File' button will prompt another modal popup, which will allow you to upload files. The name of the file and its progress will be displayed while uploads occur. <br/>
+You can create folders inside of folders too. Clicking on the 'Add File' button will prompt another modal popup, which will allow you to upload files. The name of the file and its progress will be displayed while uploads occur. <br/>
 ![uploading](/screenshots/6.png)
 <br/>
 <br/>
