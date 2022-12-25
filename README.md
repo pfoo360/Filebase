@@ -5,9 +5,9 @@
 
 # About
 
-A small feature of my previous project allowed users to upload pictures. Those images, however, were stored locally within an 'uploads' directory within the project itself and not in the cloud. I was not satisified with that aspect of my project so I decided to create this app to learn about storing images remotely and retrieving those images when needed. Filebase is a simple file hosting app. Users are able to upload files and then download them at a later time.
+A small feature of my previous project allowed users to upload pictures. Those images, however, were stored inside an 'uploads' directory within the project itself- NOT in the cloud. I was not satisified with that aspect of my previous project so I decided to create this app to learn about storing images remotely and retrieving those images when needed. Additionally, cloud storage services (AWS, GCP, etc.) tend to be used for many websites/apps so I thought this project would be a good foray into a common web dev element. I also wanted to experiment with NextJS (instead of CRA) and Prisma (instead of writing my own models and SQL queries) so this app uses those technologies too.
 
-I also wanted to experiment with NextJS (instead of CRA) and Prisma (instead of writing my own models and SQL queries)
+Filebase, named after Firebase, is a simple file hosting app. Users are able to upload files and then download them at a later time.
 
 [Click here for a walkthrough.](#walkthrough)
 
@@ -39,9 +39,9 @@ I also wanted to experiment with NextJS (instead of CRA) and Prisma (instead of 
 - Learn how to use Firebase's client SDK and Firebase's admin SDK/Google Cloud Storage API
 - Familarize myself with NextJS (file-based routing, SSR, etc.)
 - Work with TypeScript
-- Connect Prisma with a PostgreSQL DB and create schemas to build tables in the DB
+- Connect Prisma with a PostgreSQL DB and create Prisma schemas to build tables in the DB
 - Use Prisma's ORM
-- Learn about NextAuth for signins and persist signups in the DB
+- Learn and use about NextAuth for signins and persist signups in the DB
 
 # Improvements
 
@@ -50,8 +50,8 @@ I also wanted to experiment with NextJS (instead of CRA) and Prisma (instead of 
 - Implement progress bars when uploading files for better UX (currently the app displays [bytes uploaded]/[total bytes])
 - Possibly better security to absolutely ensure files can only be viewed by their owners
 - More error handling (can never go wrong with more error handling for edge cases)
-- I should have incorporated TypeScript while developing instead of saving it until the end (would have caught issues while developing and not just at the end of the project + the intellisense would have been much more helpful during the coding and not at the tailend of the project)
-- Media queries and responsive design support (currently it only looks good on certain desktop browsers)
+- I should have incorporated TypeScript while developing instead of saving it until the end (would have caught issues while developing and not just at the end of the project + the intellisense would have been much more helpful during the coding process and not at the tailend of the project)
+- Media queries and responsive design support (currently it only looks good on certain desktop browsers/window sizes)
 - Small CSS issues that need to be worked on
 
 # Walkthrough
@@ -77,7 +77,8 @@ After adding a folder (or two) you can click on its name to be taken inside. The
 <br/>
 <br/>
 
-You can create folders inside of folders too. Clicking on the 'Add File' button will prompt another modal popup, which will allow you to upload files. The name of the file and its progress will be displayed while uploads occur. <br/>
+You can create folders inside of folders too.<br/>
+Clicking on the 'Add File' button will prompt another modal popup, which will allow you to upload files. The name of the file and its progress will be displayed while uploads occur. <br/>
 ![uploading](/screenshots/6.png)
 <br/>
 <br/>
