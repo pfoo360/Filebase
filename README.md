@@ -1,10 +1,15 @@
 # Filebase
 
+![home_page](/screenshots/4.png)
+![home_page](/screenshots/7.png)
+
 # About
 
 A small feature of my previous project allowed users to upload pictures. Those images, however, were stored locally within an 'uploads' directory within the project itself and not in the cloud. I was not satisified with that aspect of my project so I decided to create this app to learn about storing images remotely and retrieving those images when needed. Filebase is a simple file hosting app. Users are able to upload files and then download them at a later time.
 
 I also wanted to experiment with NextJS (instead of CRA) and Prisma (instead of writing my own models and SQL queries)
+
+[Click here for a walkthrough.](#walkthrough)
 
 # Features
 
@@ -41,9 +46,63 @@ I also wanted to experiment with NextJS (instead of CRA) and Prisma (instead of 
 # Improvements
 
 - Create folder breadcrumbs for better UX
+- Thumbnails for user's files instead of just icons
 - Possibly better security to absolutely ensure files can only be viewed by their owners
 - More error handling (can never go wrong with more error handling of edge cases)
 - I should have incorporated TypeScript while developing instead of saving it until the end (would have caught issues while developing and not just at the end of the project + the intellisense would have been much more helpful during the coding and not just at the tailend of the project)
+- Media queries and responsive design support (currently it only looks good on certain desktop browsers)
+- Small CSS issues that need to be worked on
+
+# Walkthrough
+
+When you first visit the site, you will be prompted to login. Currently, GitHub auth is supported. <br/>
+![login](/screenshots/1.png)
+<br/>
+<br/>
+
+Upon login you will be greeted with the dashboard. As a new user you have yet to create a folder so this is what will be displayed. <br/>
+![new_user_home](/screenshots/2.png)
+<br/>
+<br/>
+
+Clicking on the 'Add Folder' button will prompt a modal popup asking you what to title your soon-to-be created folder. <br/>
+![create_folder_modal](/screenshots/3.png)
+<br/>
+<br/>
+
+After adding a folder (or two) you can click on its name to be taken inside. The blue button next to the folder name will take you up one directory. <br/>
+![created_folders](/screenshots/4.png)
+![inside_folder](/screenshots/5.png)
+<br/>
+<br/>
+
+Clicking on the 'Add File' button will prompt another modal popup, which will allow you to upload files. The name of the file and its progress will be displayed while uploads occur. <br/>
+![uploading](/screenshots/6.png)
+<br/>
+<br/>
+
+After uploads have completed, this is what a directory will look like. <br/>
+![uploads](/screenshots/7.png)
+<br/>
+<br/>
+
+Folders can be deleted or renamed by clicking on their red or yellow buttons, respectively. In this instance, we are renaming a folder. <br/>
+![rename_modal](/screenshots/11.png)
+![rename_modal_disabled](/screenshots/12.png)
+![rename_success](/screenshots/13.png)
+<br/>
+<br/>
+
+Clicking the red trash can button will prompt you to confirm that you wish to delete the file from the app. Like all other aspects of the app, upon confirmation the button(s) will be 'greyed out', indicating an action is taking place (in this case, a file deletion attempt). <br/>
+![delete](/screenshots/8.png)
+![delete_disabled_buttons](/screenshots/9.png)
+<br/>
+<br/>
+
+Finally, files can be re-downloaded by clicking on the yellow button next to the delete button. Note, that some files (typically images, videos, and audio files) will open a new tab for you to save while others will be automatically downloaded to your local machine. <br/>
+![download](/screenshots/10.png)
+<br/>
+<br/>
 
 # References
 
