@@ -3,20 +3,32 @@ import { faCircleDown } from "@fortawesome/free-regular-svg-icons";
 import axios from "../../lib/axios";
 import { memo } from "react";
 import { DownloadButtonProps } from "../../types/types";
+import { useState } from "react";
 
 const DownloadButton = ({ id }: DownloadButtonProps) => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const handleDownloadButtonClick = async () => {
-    if (id === "" || id === null || id === undefined || !id) return;
-    const {
-      data: { signedUrl },
-    } = await axios.post<{ signedUrl: string }>("/api/viewFile", { id });
+    try {
+      setIsSubmitting(true);
+      if (id === "" || id === null || id === undefined || !id) return;
+      const {
+        data: { signedUrl },
+      } = await axios.post<{ signedUrl: string }>("/api/viewFile", { id });
 
-    if (signedUrl) window.open(signedUrl, "_blank");
+      if (signedUrl) window.open(signedUrl, "_blank");
+      setIsSubmitting(false);
+    } catch (err) {
+      console.log(err);
+      setIsSubmitting(false);
+    }
   };
   return (
     <button
       onClick={handleDownloadButtonClick}
-      className={`text-slate-50 bg-amber-400 py-2 px-3.5 rounded hover:bg-amber-500 mx-2`}
+      disabled={isSubmitting}
+      className={`text-slate-50 bg-amber-400 py-2 px-3.5 rounded hover:bg-amber-500 mx-2 ${
+        isSubmitting && `bg-amber-200 text-slate-50 hover:bg-amber-200`
+      }`}
     >
       <FontAwesomeIcon icon={faCircleDown} />
     </button>
