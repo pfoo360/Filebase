@@ -6,7 +6,7 @@ import * as admin from "firebase-admin";
 //   storageBucket: "filebase-620a1.appspot.com",
 // });
 
-const serviceAccount = JSON.parse(process.env.FIREBASE_ADMIN);
+const serviceAccount = JSON.parse(process.env.FIREBASE_ADMIN as string);
 
 if (!admin.apps.length) {
   admin.initializeApp({
