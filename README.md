@@ -131,4 +131,3 @@ app.get("/image", async (req, res) => {
 - [Generating access token when uploading file via Firebase Admin SDK](https://stackoverflow.com/questions/71610858/can-not-get-url-image-storage-firebase-error-creating-access-token)
 - [Generating access token when uploading file via Firebase Admin SDK](https://stackoverflow.com/questions/59432624/how-can-i-generate-access-token-to-file-uploaded-to-firebase-storage)
 - [Node ExpressJS Download file from memory/Triggering a file download ](https://stackoverflow.com/questions/45922074/node-express-js-download-file-from-memory-filename-must-be-a-string)
-- []
