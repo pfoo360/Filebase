@@ -49,6 +49,8 @@ Filebase, named after Firebase, is a simple file hosting app. Users are able to 
 - Display thumbnails for user's files instead of just icons for better UX
 - Implement progress bars when uploading files for better UX (currently the app displays [bytes uploaded]/[total bytes])
 - Possibly better security to absolutely ensure files can only be viewed by their owners
+- Implement an incoming request logger and an error logger
+- Backend api could be DRYer
 - More error handling (can never go wrong with more error handling for edge cases)
 - I should have incorporated TypeScript while developing instead of saving it until the end (would have caught issues while developing and not just at the end of the project + the intellisense would have been much more helpful during the coding process and not at the tailend of the project)
 - Media queries and responsive design support (currently it only looks good on certain desktop browsers/window sizes)
