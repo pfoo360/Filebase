@@ -58,9 +58,11 @@ function UpdateFolder({ folderId, parentFolderId }: UpdateFolderProps) {
 
         queryClient.setQueryData(
           ["usersFolders", parentFolderId],
-          (oldQueryData) => {
+          (oldQueryData: any) => {
+            if (!oldQueryData?.data?.folders) return oldQueryData;
+
             const updatedArrayOfFolders = oldQueryData.data.folders.map(
-              (folder) => {
+              (folder: Folder) => {
                 if (folder.id === updatedFolder.id) return updatedFolder;
                 return folder;
               }
