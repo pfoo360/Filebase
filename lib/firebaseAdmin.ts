@@ -11,7 +11,7 @@ const serviceAccount = JSON.parse(process.env.FIREBASE_ADMIN as string);
 if (!admin.apps.length) {
   admin.initializeApp({
     credential: admin.credential.cert(serviceAccount),
-    storageBucket: "filebase-620a1.appspot.com",
+    storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
   });
 }
 
