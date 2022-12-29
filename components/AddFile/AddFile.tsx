@@ -101,9 +101,10 @@ function AddFile({ currentFolder, currentUser, path }: AddFileProps) {
     )
       return; //if the currentUser is not the owner of folder
 
-    setIsSubmitting(true);
-
     const { files } = e.target;
+    if (files === null || files.length <= 0) return;
+
+    setIsSubmitting(true);
     let promises: Promise<FileInformation>[] = [];
 
     [...files].forEach((file, index) => {
