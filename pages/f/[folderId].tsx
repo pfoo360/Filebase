@@ -139,9 +139,11 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
   });
   if (!user || !user?.id) return { notFound: true };
 
+  if (context?.params === undefined) return { notFound: true };
+
   const { folderId } = context.params;
   const parentFolder = await prisma.folder.findUnique({
-    where: { id: folderId },
+    where: { id: folderId as string },
   });
 
   if (!parentFolder || parentFolder.userId !== user.id)
