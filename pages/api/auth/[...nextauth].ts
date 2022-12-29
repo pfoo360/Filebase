@@ -11,15 +11,10 @@ export const authOptions = {
     }),
   ],
   adapter: PrismaAdapter(prisma),
-  // session: {
-  //   strategy: "database",
-  //   maxAge: 30 * 24 * 60 * 60,
-  //   updateAge: 24 * 60 * 60,
-  // },
   pages: {
     signIn: "/signin",
-    //signOut: "/signout",
   },
+  debug: true
 };
 
 export default NextAuth(authOptions);
