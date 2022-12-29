@@ -10,7 +10,7 @@ import { v4 as uuidv4 } from "uuid";
 import Modal from "../Modal/Modal";
 import { useSession } from "next-auth/react";
 import axios from "../../lib/axios";
-import { useMutation, useQueryClient, Updater } from "@tanstack/react-query";
+import { useMutation, useQueryClient } from "@tanstack/react-query";
 import {
   AddFileProps,
   FileInformation,
@@ -18,7 +18,7 @@ import {
   File,
   AddFile,
 } from "../../types/types";
-import { AxiosError, AxiosResponse } from "axios";
+import { AxiosError } from "axios";
 
 const addFile: AddFile = async (fileInformation) => {
   return await axios.post<{ file: File }>("/api/addFile", {
@@ -104,8 +104,8 @@ function AddFile({ currentFolder, currentUser, path }: AddFileProps) {
     const { files } = e.target;
     if (files === null || files.length <= 0) return;
 
-    setIsSubmitting(true);
     let promises: Promise<FileInformation>[] = [];
+    setIsSubmitting(true);
 
     [...files].forEach((file, index) => {
       const fileInformation: Omit<FileInformation, "downloadUrl"> = {
