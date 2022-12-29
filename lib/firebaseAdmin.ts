@@ -3,7 +3,7 @@ import * as admin from "firebase-admin";
 
 // initializeApp({
 //   credential: applicationDefault(),
-//   storageBucket: "filebase-620a1.appspot.com",
+//   storageBucket: "",
 // });
 
 const serviceAccount = JSON.parse(process.env.FIREBASE_ADMIN as string);

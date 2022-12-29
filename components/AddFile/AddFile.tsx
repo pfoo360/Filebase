@@ -10,7 +10,7 @@ import { v4 as uuidv4 } from "uuid";
 import Modal from "../Modal/Modal";
 import { useSession } from "next-auth/react";
 import axios from "../../lib/axios";
-import { useMutation, useQueryClient } from "@tanstack/react-query";
+import { useMutation, useQueryClient, Updater } from "@tanstack/react-query";
 import {
   AddFileProps,
   FileInformation,
@@ -18,6 +18,7 @@ import {
   File,
   AddFile,
 } from "../../types/types";
+import { AxiosError } from "axios";
 
 const addFile: AddFile = async (fileInformation) => {
   return await axios.post<{ file: File }>("/api/addFile", {
@@ -35,7 +36,7 @@ function AddFile({ currentFolder, currentUser, path }: AddFileProps) {
   const { error, isError, isLoading, isSuccess, mutate } = useMutation(
     addFile,
     {
-      onError: async (error) => {
+      onError: async (error: AxiosError) => {
         //file information could not be saved to DB; delete file in Firebase
         if (error?.config?.data) {
           const fileInformation = JSON.parse(error.config.data);
@@ -63,6 +64,7 @@ function AddFile({ currentFolder, currentUser, path }: AddFileProps) {
         queryClient.setQueryData(
           ["usersFiles", currentFolder.id],
           (oldQueryData) => {
+            console.log(oldQueryData);
             return {
               ...oldQueryData,
               data: {
