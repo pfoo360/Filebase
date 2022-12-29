@@ -4,6 +4,9 @@ import { ModalProps, ModalReturn } from "../../types/types";
 function Modal({ open, onClose, children }: ModalProps): ModalReturn {
   if (!open) return null;
 
+  const overlayRootEl = document.getElementById("modal-root");
+  if (overlayRootEl === null) return null;
+
   return ReactDom.createPortal(
     <>
       <div
@@ -14,7 +17,7 @@ function Modal({ open, onClose, children }: ModalProps): ModalReturn {
         {children}
       </div>
     </>,
-    document.getElementById("modal-root")
+    overlayRootEl
   );
 }
 
