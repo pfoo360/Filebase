@@ -32,7 +32,7 @@ function AddFolder({ parentFolderId, path }: AddFolderProps) {
 
         queryClient.setQueryData(
           ["usersFolders", parentFolderId],
-          (oldQueryData) => {
+          (oldQueryData: any) => {
             return {
               ...oldQueryData,
               data: {

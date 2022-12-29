@@ -17,7 +17,9 @@ function Folder({ id, name, createdAt, userId, parentFolderId }: Folder) {
           <FontAwesomeIcon icon={faFolderClosed} className="mr-2" />
           <span className="text-slate-100 hover:text-amber-300">{name}</span>
         </Link>
-        <div className="text-xs text-slate-50 mt-1">{createdAt}</div>
+        <div className="text-xs text-slate-50 mt-1">
+          {new Date(createdAt).toString()}
+        </div>
       </div>
 
       <div className="w-1/6 flex flex-row justify-end items-center">

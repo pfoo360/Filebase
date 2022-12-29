@@ -23,7 +23,9 @@ function File({
           <h1 className="ml-2 text-slate-100 hover:text-amber-300">{name}</h1>
         </div>
         <div className="text-xs text-slate-50 mt-1">{size} bytes</div>
-        <div className="text-xs text-slate-50 mt-1">{createdAt}</div>
+        <div className="text-xs text-slate-50 mt-1">
+          {new Date(createdAt).toString()}
+        </div>
       </div>
       <div className="w-1/6 flex flex-row justify-end items-center">
         <DeleteFile fileId={id} parentFolderId={parentFolderId} />

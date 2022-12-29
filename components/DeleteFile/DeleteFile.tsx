@@ -27,9 +27,9 @@ function DeleteFile({ fileId, parentFolderId }: DeleteFileProps) {
         const { deletedFile } = data.data;
         queryClient.setQueryData(
           ["usersFiles", parentFolderId],
-          (oldQueryData) => {
+          (oldQueryData: any) => {
             const updatedArrayOfFiles = oldQueryData.data.files.filter(
-              (file) => file.id !== deletedFile.id
+              (file: File) => file.id !== deletedFile.id
             );
             return {
               ...oldQueryData,
