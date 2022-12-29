@@ -18,7 +18,7 @@ import {
   File,
   AddFile,
 } from "../../types/types";
-import { AxiosError } from "axios";
+import { AxiosError, AxiosResponse } from "axios";
 
 const addFile: AddFile = async (fileInformation) => {
   return await axios.post<{ file: File }>("/api/addFile", {
@@ -63,7 +63,7 @@ function AddFile({ currentFolder, currentUser, path }: AddFileProps) {
 
         queryClient.setQueryData(
           ["usersFiles", currentFolder.id],
-          (oldQueryData) => {
+          (oldQueryData: any) => {
             console.log(oldQueryData);
             return {
               ...oldQueryData,
