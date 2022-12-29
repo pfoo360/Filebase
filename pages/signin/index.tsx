@@ -16,7 +16,7 @@ const SignIn: NextPage = () => {
   const { data: session, status } = useSession();
 
   const handleOAuthSignIn: HandleOAuthSignIn = (provider) => () => {
-    signIn(provider, { callbackUrl: callbackUrl || "/" });
+    signIn(provider, { callbackUrl: (callbackUrl || "/") as string });
   };
 
   if (status === "loading")
