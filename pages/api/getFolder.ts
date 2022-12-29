@@ -10,7 +10,7 @@ export default async function handler(
     console.log(`${req.method} ${req.url}`);
 
     if (req.method !== "POST") {
-      return res.status(405).send({ message: "Only POST requests allowed" });
+      return res.status(405).json({ message: "Only POST requests allowed" });
     }
 
     const { parentFolderId, session }: FetchFoldersParams = req.body;
@@ -31,7 +31,7 @@ export default async function handler(
     });
 
     res.status(200).json({ folders });
-  } catch (err) {
+  } catch (err: any) {
     console.log(err?.stack);
 
     const name = err?.name ? err.name : "Server error";

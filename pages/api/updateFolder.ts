@@ -12,7 +12,7 @@ export default async function handler(
     console.log(`${req.method} ${req.url}`);
 
     if (req.method !== "PUT") {
-      return res.status(405).send({ message: "Only PUT requests allowed" });
+      return res.status(405).json({ message: "Only PUT requests allowed" });
     }
 
     const { folderId, newFolderName }: UpdateFolderParams = req.body;
@@ -40,7 +40,7 @@ export default async function handler(
     });
 
     res.status(200).json({ updatedFolder });
-  } catch (err) {
+  } catch (err: any) {
     console.log(err?.stack);
 
     const name = err?.name ? err.name : "Server error";

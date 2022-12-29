@@ -13,7 +13,7 @@ export default async function handler(
     console.log(`${req.method} ${req.url}`);
 
     if (req.method !== "POST") {
-      return res.status(405).send({ message: "Only POST requests allowed" });
+      return res.status(405).json({ message: "Only POST requests allowed" });
     }
 
     const { id }: { id: string } = req.body;
@@ -50,7 +50,7 @@ export default async function handler(
     const signedUrl = await bucket.file(PATH).getSignedUrl(CONFIG);
 
     res.status(200).json({ signedUrl: signedUrl[0] });
-  } catch (err) {
+  } catch (err: any) {
     console.log(err?.stack);
 
     const name = err?.name ? err.name : "Server error";

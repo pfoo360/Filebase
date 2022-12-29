@@ -13,7 +13,7 @@ export default async function handler(
     console.log(`${req.method} ${req.url}`);
 
     if (req.method !== "DELETE") {
-      return res.status(405).send({ message: "Only DELETE requests allowed" });
+      return res.status(405).json({ message: "Only DELETE requests allowed" });
     }
 
     const session = await unstable_getServerSession(req, res, authOptions);
@@ -51,7 +51,7 @@ export default async function handler(
     });
 
     res.status(200).json({ deletedFolder });
-  } catch (err) {
+  } catch (err: any) {
     console.log(err?.stack);
 
     const name = err?.name ? err.name : "Server error";
