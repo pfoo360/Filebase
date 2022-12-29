@@ -9,7 +9,7 @@ export default async function handler(
   res: NextApiResponse<{ updatedFolder: Folder } | Error>
 ) {
   try {
-    console.log("updateFolder");
+    console.log(`${req.method} ${req.url}`);
 
     if (req.method !== "PUT") {
       return res.status(405).send({ message: "Only PUT requests allowed" });

@@ -10,7 +10,7 @@ export default async function handler(
   res: NextApiResponse<{ signedUrl: string } | Error>
 ) {
   try {
-    console.log("viewFile");
+    console.log(`${req.method} ${req.url}`);
 
     if (req.method !== "POST") {
       return res.status(405).send({ message: "Only POST requests allowed" });

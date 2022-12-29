@@ -7,7 +7,7 @@ export default async function handler(
   res: NextApiResponse<{ folders: Folder[] } | Error>
 ) {
   try {
-    console.log("getFolder");
+    console.log(`${req.method} ${req.url}`);
 
     if (req.method !== "POST") {
       return res.status(405).send({ message: "Only POST requests allowed" });

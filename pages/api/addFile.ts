@@ -9,7 +9,7 @@ export default async function handler(
   res: NextApiResponse<{ file: File } | Error>
 ) {
   try {
-    console.log("addFile");
+    console.log(`${req.method} ${req.url}`);
 
     if (req.method !== "POST") {
       return res.status(405).send({ message: "Only POST requests allowed" });

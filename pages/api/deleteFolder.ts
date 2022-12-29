@@ -10,7 +10,7 @@ export default async function handler(
   res: NextApiResponse<{ deletedFolder: Folder } | Error>
 ) {
   try {
-    console.log("deleteFolder");
+    console.log(`${req.method} ${req.url}`);
 
     if (req.method !== "DELETE") {
       return res.status(405).send({ message: "Only DELETE requests allowed" });

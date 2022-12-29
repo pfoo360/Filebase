@@ -9,7 +9,7 @@ export default async function handler(
   res: NextApiResponse<{ folder: Folder } | Error>
 ) {
   try {
-    console.log("addFolder");
+    console.log(`${req.method} ${req.url}`);
 
     if (req.method !== "POST") {
       return res.status(405).send({ message: "Only POST requests allowed" });
