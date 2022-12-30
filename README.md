@@ -11,7 +11,10 @@ Filebase, named after Firebase, is a simple file hosting app. Users are able to 
 
 [Click here for a walkthrough.](#walkthrough)
 
+Click the button below to view the app
 [<img src="https://raw.githubusercontent.com/pfoo360/Filebase/main/screenshots/lnk.png" width="163px" />](https://filebase-azure.vercel.app/)
+
+NOTE: the app still has a lot of improvments that can be made. Use at your own discretion. View the [improvements](#improvements) section for known minor and major issues with the app before you do anything!
 
 # Features
 
@@ -43,13 +46,14 @@ Filebase, named after Firebase, is a simple file hosting app. Users are able to 
 - Learn how to use Firebase's client SDK and Firebase's admin SDK/Google Cloud Storage API
 - Familarize myself with NextJS (file-based routing, SSR, etc.)
 - Work with TypeScript
-- Connect Prisma with a PostgreSQL DB and create Prisma schemas to build tables in the DB
+- Connect Prisma with a PostgreSQL DB in the cloud and create Prisma schemas to build tables in the DB
 - Use Prisma's ORM
 - Learn and use about NextAuth for signins and persist signups in the DB
 - Deploy an app
 
 # Improvements
 
+- Currently if you sign in, perform a few actions, sign out and then attempt to sign in again you will sometimes be directed to '/api/auth/error' instead of your homepage/dashboard. If you wait a few minutes between signing out and signing back in again, this issue does not occur. I am unsure what triggers the failed-sign-in-again-and-redirect-to-/api/auth/error issue/bug at this time.
 - Create folder breadcrumbs for better UX
 - Display thumbnails for user's files instead of just icons for better UX
 - Implement progress bars when uploading files for better UX (currently the app displays [bytes uploaded]/[total bytes])
@@ -59,7 +63,7 @@ Filebase, named after Firebase, is a simple file hosting app. Users are able to 
 - More error handling (can never go wrong with more error handling for edge cases)
 - I should have incorporated TypeScript while developing instead of saving it until the end (would have caught issues while developing and not just at the end of the project + the intellisense would have been much more helpful during the coding process and not at the tailend of the project)
 - Media queries and responsive design support (currently it only looks good on certain desktop browsers/window sizes)
-- Small CSS issues that need to be worked on
+- Small CSS issues that need to be worked on (header section does not look how it should if a user creates too many files/folders and the scrollbar appears)
 
 # Walkthrough
 
