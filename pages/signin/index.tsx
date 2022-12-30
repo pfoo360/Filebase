@@ -47,9 +47,7 @@ const SignIn: NextPage = () => {
         {PROVIDERS.map(({ provider, name, icon }) => (
           <button
             key={provider}
-            onClick={() => {
-              signIn(provider, { callbackUrl: (callbackUrl || "/") as string });
-            }}
+            onClick={handleOAuthSignIn(provider)}
             className="bg-slate-400 rounded text-slate-800 px-4 py-2 hover:bg-slate-200 text-lg"
           >
             <FontAwesomeIcon icon={icon} className="mr-2" />

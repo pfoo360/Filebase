@@ -7,12 +7,8 @@ function SignOutButton({ children }: SignOutButtonProps) {
   const { push } = useRouter();
 
   const handleSignOut = async () => {
-    const a = await signOut({
-      //redirect: false,
-      callbackUrl: "/signin",
-    });
-    //push(url);
-    console.log(a);
+    const { url } = await signOut({ redirect: false, callbackUrl: "/signin" });
+    push(url);
   };
 
   return (
