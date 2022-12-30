@@ -11,7 +11,7 @@ Filebase, named after Firebase, is a simple file hosting app. Users are able to 
 
 [Click here for a walkthrough.](#walkthrough)
 
-[<img src="./screenshots/lnk" width="163px" />](https://filebase-azure.vercel.app/)
+[<img src="https://raw.githubusercontent.com/pfoo360/Filebase/main/screenshots/lnk.png" width="163px" />](https://filebase-azure.vercel.app/)
 
 # Features
 
