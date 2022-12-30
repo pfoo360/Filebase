@@ -5,11 +5,13 @@
 
 # About
 
-A small feature of my previous project allowed users to upload pictures. Those images, however, were stored inside an 'uploads' directory within the project itself- NOT in the cloud. I was not satisified with that aspect of my previous project so I decided to create this app to learn about storing images remotely and retrieving those images when needed. Additionally, cloud storage services (AWS, GCP, etc.) tend to be used for many websites/apps so I thought this project would be a good foray into a common web dev element. I also wanted to experiment with NextJS (instead of CRA) and Prisma (instead of writing my own models and SQL queries) so this app uses those technologies too.
+A small feature of my previous project allowed users to upload pictures. Those images, however, were stored inside an 'uploads' directory within the project itself- NOT in the cloud. I was not satisified with that aspect of my previous project so I decided to create this app to learn about storing images remotely and retrieving those images when needed. Additionally, cloud storage services (AWS, GCP, etc.) tend to be used for many websites/apps and I've always been interested in the convenience of cloud solutions (Dropbox, Google Drive, and even MegaUpload!) so I thought this project would be a good foray into a common web dev element while also being something I'm interested in. I also wanted to experiment with NextJS (instead of CRA) and Prisma (instead of writing my own models and SQL queries) so this app gave me an excuse to experiment with those.
 
-Filebase, named after Firebase, is a simple file hosting app. Users are able to upload files and then download them at a later time.
+Filebase, named after Firebase, is a simple file hosting app. Users are able to create directories, upload files and then download them at a later time.
 
 [Click here for a walkthrough.](#walkthrough)
+
+[<img src="./screenshots/lnk" width="163px" />](https://filebase-azure.vercel.app/)
 
 # Features
 
@@ -32,6 +34,8 @@ Filebase, named after Firebase, is a simple file hosting app. Users are able to 
 - Typescript
 - React Query
 - TailwindCSS
+- Vercel
+- Railway
 
 # Goals
 
@@ -42,6 +46,7 @@ Filebase, named after Firebase, is a simple file hosting app. Users are able to 
 - Connect Prisma with a PostgreSQL DB and create Prisma schemas to build tables in the DB
 - Use Prisma's ORM
 - Learn and use about NextAuth for signins and persist signups in the DB
+- Deploy an app
 
 # Improvements
 
