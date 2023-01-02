@@ -16,7 +16,7 @@ Click the button below to view the app
 <br/>
 [<img src="https://raw.githubusercontent.com/pfoo360/Filebase/main/screenshots/lnk.png" width="163px" />](https://filebase-azure.vercel.app/)
 
-NOTE: the app still has a lot of improvments that can be made. Use at your own discretion. View the [improvements](#improvements) section for known minor and major issues with the app before you do anything!
+NOTE: the app was made for educational/experimental purposes only. It still has a lot of improvments that can be made. View the [improvements](#improvements) section for known minor and major issues with the app!
 
 # Features
 

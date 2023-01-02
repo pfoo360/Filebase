@@ -1,6 +1,5 @@
 import { useRouter } from "next/router";
 import { signOut } from "next-auth/react";
-import { memo } from "react";
 import { SignOutButtonProps } from "../../types/types";
 
 function SignOutButton({ children }: SignOutButtonProps) {
@@ -21,4 +20,4 @@ function SignOutButton({ children }: SignOutButtonProps) {
   );
 }
 
-export default memo(SignOutButton);
+export default SignOutButton;
