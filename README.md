@@ -16,6 +16,7 @@ Click the button below to view the app
 <br/>
 [<img src="https://raw.githubusercontent.com/pfoo360/Filebase/main/screenshots/lnk.png" width="163px" />](https://filebase-azure.vercel.app/)
 
+NOTE: the database is currently disabled by me so the app will not work at this time.
 NOTE: the app was made for educational/experimental purposes only. It is still in need of improvment but the high-level/general functionality is in place. View the [improvements](#improvements) section for known minor and major issues with the app!
 
 # Features
@@ -79,7 +80,7 @@ Upon login you will be greeted with the dashboard. As a new user you have yet to
 <br/>
 <br/>
 
-Clicking on the 'Add Folder' button will prompt a modal popup asking you what to title your soon-to-be created folder. <br/>
+Clicking on the 'Add Folder' button will prompt a modal popup asking you what to title your soon-to-be created folder. The React Query cache will be updated instead of calling a refetch to keep the UI up-to-date and avoid expensive api calls. <br/>
 ![create_folder_modal](/screenshots/3.png)
 <br/>
 <br/>
@@ -91,7 +92,7 @@ After adding a folder (or two) you can click on its name to be taken inside. The
 <br/>
 
 You can create folders inside of folders too.<br/>
-Clicking on the 'Add File' button will prompt another modal popup, which will allow you to upload files. The name of the file and its progress will be displayed while uploads occur. <br/>
+Clicking on the 'Add File' button will prompt another modal popup, which will allow you to upload files. The name of the file and its progress will be displayed while uploads occur. The React Query cache will be updated instead of calling a refetch to keep the UI up-to-date and avoid expensive api calls. <br/>
 ![uploading](/screenshots/6.png)
 <br/>
 <br/>
@@ -101,14 +102,14 @@ After uploads have completed, this is what a directory will look like. <br/>
 <br/>
 <br/>
 
-Folders can be deleted or renamed by clicking on their red or yellow buttons, respectively. In this instance, we are renaming a folder. <br/>
+Folders can be deleted or renamed by clicking on their red or yellow buttons, respectively. In this instance, we are renaming a folder. For updating folder names, the React Query cache will be updated instead of calling a refetch.<br/>
 ![rename_modal](/screenshots/11.png)
 ![rename_modal_disabled](/screenshots/12.png)
 ![rename_success](/screenshots/13.png)
 <br/>
 <br/>
 
-Clicking the red trash can button will prompt you to confirm that you wish to delete the file from the app. Like all other aspects of the app, upon confirmation the button(s) will be 'greyed out', indicating an action is taking place (in this case, a file deletion attempt). <br/>
+Clicking the red trash can button will prompt you to confirm that you wish to delete the file from the app. The React Query cache will be updated instead of calling a refetch to keep the UI up-to-date and avoid expensive api calls. Like all other aspects of the app, upon confirmation the button(s) will be 'greyed out', indicating an action is taking place (in this case, a file deletion attempt). <br/>
 ![delete](/screenshots/8.png)
 ![delete_disabled_buttons](/screenshots/9.png)
 <br/>
