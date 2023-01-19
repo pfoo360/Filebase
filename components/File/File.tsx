@@ -1,7 +1,6 @@
 import DeleteFile from "../DeleteFile/DeleteFile";
 import Icon from "../Icon/Icon";
 import DownloadFile from "../DownloadFile/DownloadFile";
-import { memo } from "react";
 import { File } from "../../types/types";
 
 function File({
@@ -35,5 +34,4 @@ function File({
   );
 }
 
-export default memo(File);
-// export default File;
+export default File;

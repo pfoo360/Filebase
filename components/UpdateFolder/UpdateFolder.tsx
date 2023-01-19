@@ -140,7 +140,4 @@ function UpdateFolder({ folderId, parentFolderId }: UpdateFolderProps) {
   );
 }
 
-//using memo
-//will only re-render when it receives new data, or when its internal state changes
-//export default memo(UpdateFolder);
 export default UpdateFolder;

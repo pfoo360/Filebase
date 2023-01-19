@@ -1,4 +1,4 @@
-import { useState, memo } from "react";
+import { useState } from "react";
 import { useQueryClient, useMutation } from "@tanstack/react-query";
 import axios from "../../lib/axios";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -104,4 +104,4 @@ function DeleteFile({ fileId, parentFolderId }: DeleteFileProps) {
   );
 }
 
-export default memo(DeleteFile);
+export default DeleteFile;

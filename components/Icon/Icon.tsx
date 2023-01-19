@@ -13,7 +13,6 @@ import {
   faFileZipper,
   faFile,
 } from "@fortawesome/free-regular-svg-icons";
-import { memo } from "react";
 import { IconProps } from "../../types/types";
 
 function Icon({ type }: IconProps) {
@@ -60,4 +59,4 @@ function Icon({ type }: IconProps) {
   return <FontAwesomeIcon icon={faFile} />;
 }
 
-export default memo(Icon);
+export default Icon;

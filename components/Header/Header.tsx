@@ -2,7 +2,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFolder } from "@fortawesome/free-regular-svg-icons";
 import { useSession } from "next-auth/react";
 import SignOutButton from "../SignOutButton/SignOutButton";
-import { memo } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -37,5 +36,4 @@ function Header() {
   );
 }
 
-export default memo(Header);
-// export default Header;
+export default Header;

@@ -112,5 +112,4 @@ function DeleteFolder({ folderId, parentFolderId }: DeleteFolderProps) {
   );
 }
 
-// export default memo(DeleteFolder);
 export default DeleteFolder;

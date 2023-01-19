@@ -1,7 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleDown } from "@fortawesome/free-regular-svg-icons";
 import axios from "../../lib/axios";
-import { memo } from "react";
 import { DownloadButtonProps } from "../../types/types";
 import { useState } from "react";
 
@@ -36,4 +35,4 @@ const DownloadButton = ({ id }: DownloadButtonProps) => {
   );
 };
 
-export default memo(DownloadButton);
+export default DownloadButton;

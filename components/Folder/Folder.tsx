@@ -1,4 +1,3 @@
-import { memo } from "react";
 import Link from "next/link";
 import DeleteFolder from "../DeleteFolder/DeleteFolder";
 import UpdateFolder from "../UpdateFolder/UpdateFolder";
@@ -30,5 +29,4 @@ function Folder({ id, name, createdAt, userId, parentFolderId }: Folder) {
   );
 }
 
-export default memo(Folder);
-//export default Folder;
+export default Folder;
